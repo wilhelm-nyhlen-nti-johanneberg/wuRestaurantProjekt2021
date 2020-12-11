@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: coolvetica ,Arial, Helvetica, sans-serif;
+}
+
+#Homecontainer {
+    display: grid;
+    height: 210vh;
+    width: 100vw;
+
+    grid-template-rows: 100px 45% 40% 10%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    '. .'
+    'Msec Msec'
+    'Mse2 Mart'
+    'fo fo'
+    ;
+    
+    
+    background-color: lightblue;
+    
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px ;
+    grid-area: he;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 30px 10px;
+    margin: 0;
+    /* transition: 0,6s; */
+
+}
+
+.logocontainer {
+    background-color: red;
+}
+
+.nav_länkar {
+    list-style: none;
+}
+
+.nav_länkar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_länkar li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: pink;
+    font-size: large;
+}
+
+.nav_länkar li a:hover {
+    color: blue;
+}
+
+#animegirl1 {
+    /* padding: 0;
+    background-image: url(../img/princess.png);
+    background-size: cover; */
+    justify-content: flex-end;
+}
+
+
+    
+#mainsection1 {
+    grid-area: Msec;
+    background-color: lightcoral;
+    background-image: url('../img/Cafebg3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#mainsection2 {
+    grid-area: Mse2;
+    background-color: lightseagreen;
+}
+
+#mainarticle {
+    grid-area: Mart;
+    background-color: lightpink;
+}
+
+footer {
+    grid-area: fo;
+    background-color: dark brown;
+}
+    
