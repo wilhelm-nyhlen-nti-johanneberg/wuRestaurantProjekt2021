@@ -160,7 +160,7 @@
     <h3>Lektion vecka 8</h3>
     <!-- Fyll på med dokumentation här. -->
     <p>Har börjat med att koda sidan. Har gjort mitt grid och påbörjat designen på min Hem-sida enligt min skiss. Har bestämt att resturangen ska ha ett sött/gulligt 
-        tema och ska vara inriktad mot små barn. Har än så länge endast börja designa välkommssidan men har lagt till alla 3 sidor jag ska använda och länkat dom till 
+        tema och vara främst inriktad mot barn. Har än så länge endast börja designa välkommssidan men har lagt till alla 3 sidor jag ska använda och länkat dom till 
         varandra genom navbaren. Dock ska jag vänta med att designa de andra två sidorna tills jag är färdig med Hem-sidan. screenshots på alla sidor än så länge finns
         i misc. Jag la även till en "Om oss" länk i naven som när man klickar på ska skrolla en ned på välkomsidan till en egen Om oss sektion (om jag kan få det funka). 
         Justerade bakgrundsbilden till huvudsidan lite i PS och komprimerade den så lågt jag kunde utan att fölora för mycket kvalite.
@@ -168,6 +168,19 @@
 
     <h3>Lektion vecka 9</h3>
     <!-- Fyll på med dokumentation här. -->
+    <p>Har jobbat en del på sidan och har nu fått den klar. Alla bilder jag tänkt använda är inlagda. Jag använda google och unsplash för att hitta bilder jag tyckte 
+        passade och fick sen redigera dom lite i PS för att göra dom i lämplig filstorlek mm. Gjorde även färdigt loggan i PS och lade in den i navbaren. Använde inte några
+        justeringslager eftersom jag inte kände att det behövdes men använde det på en av bakgrundsbilderna (projektfil finns i misc). Bestämde mig för att 
+        lägga en skugga på många utav rubrikerna inlusive texterna i navbaren för att addera den nödvändiga kontrasten som jag inte redan får mellan mina ljusa färger (vit, 
+        rosa etc.) En annan funktion jag lade till var smooth scroll, vilket gör det möjligt för användaren att gå direkt till "OM OSS" sektionen på Home-sidan. 
+        Fick lägga till en egenskap som kallas scroll-padding-top för att räkna med min fixade header vilket i början blockerade en del av "OM OSS" sektionen. 
+        Lade till några mer detaljerat som gifen i navbaren för att lyfta fram sidans tema ännu mer. Till sist lade jag även till en länk till ett icon-libary som 
+        jag hittade på w3schools vilket är var jag fick facebook och twitter loggorna mm.
+
+        En liten detalj jag inte hann fixa är att navbaren flyttar sig några pixlar åt vänster i "kontakt sidan", tror detta är pga. skroll fönstret som knuffar alla header 
+        elementen åt vänster i de andra sidorna. SKulle kunnat dölja detta genom att göra kontaktsidans heigth mer än 100vh endast för att den också skulle fått ett skroll fönstre
+        men kände att det var en så liten grej att det inte var värt att ändra sidans struktur över.
+    </p>
 
     <h3>Lektion vecka 10</h3>
     <!-- Fyll på med dokumentation här. -->
@@ -180,11 +193,43 @@
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    <p>
+        
+    Browser testing: Hemsidan fungerar helt korrekt i Chrome när jag testar med Live Server tilläget. När jag testar i Moziella Firefox verkar 
+    sidan fungera lika bra. Den enda skillnaden jag kunde märka var att headern blockerar en del av "Om Oss" sektionen när man använder 
+    smooth scroll och att det även inte går att navigera från navbaren till "Om Oss" från andra sidor än index sidan. Det första problemet är jag säker 
+    har att göra med att "scroll-padding-top" egenskapen inte stöds av firefox, dock är jag inte helt säker på varför inte länken till naven funkar. Tror det 
+    kan ha att göra med att "Live Server" som jag använt under hela projektet fungerar annorlunda än "Open in browser" vilket är tilläget jag använder för att testa 
+    i Firefox. 
+
+    På mobil ser sidan hyfsat bra ut i båda webbläsare, layoten är unegfär den samma och man kan se allt ganska tydligt. Dock kan jag se att texten ibland går utanför sina fönster
+    i vissa fallv vilket jag inte är helt säker på varför.
+
+    Validering: Valideringen i css hade ett syntaxfel där jag glömt ett "-" tecken vid någon flex egenskap. Förutom det fick jag endast några fel för att sidan inte gillade när jag använde 
+    å ä ö i mina klasser etc. Visste inte om detta hade någon påverkan men för säkerhets skull ändrade jag namnen på alla sådana element från ex. nav_länkar till nav_links.
+    
+    Kontrast checker: När jag först testade fick jag röda resultat vilket jag vänatde mig, så jag gav flera utav rubrikerna och texterna en svart skugga vilket adderade kontrast där jag kände att
+    behövdes. 
+
+    
+    </p>
+
+
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+
+    <p>
+        Är relativt nöjd med hemsidan som helhet. Tycker temat framgår tydligt och att sidan har en ganska stilren design och är lätt att navigera.
+        När det gäller min arbetsproccess tog jag ganska lång tid med skisserna och brainstorming i början vilket gjorde att jag kom igång med själva kodningen gansak sent. 
+        Detta gjorde att jag fick mindre tid till processen av att göra sidan + validering + testing, och fick göra mycket utanför lektionstid. 
+        Ska tänka på att förebygga detta tills nästa gång så jag kan få mer tid och hjälp med det. När det kommer till hur sidan i sig fungerar
+        är jag som sagt relativt nöjd och kommer inte på särskilt mycket jag skulle velat göra annorlunda. Det enda jag kan tänka på är testingen i olika webbläsare mot slutet
+        vilket jag känner att jag inte fick så mycket tid till jag hade velat. Om jag hade haft tid skulle jag velat kolla lite djupare på hur sidor fungerar i olika browsers och 
+        hur olika funktioner som scroll-padding-top, funkar eller inte funkar.
+    </p>
 
 </body>
 </html>
